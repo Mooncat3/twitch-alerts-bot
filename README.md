@@ -22,8 +22,8 @@ Before you begin, ensure you have the following:
    cd twitch-alerts-bot
    ```
 
-2. **Configure Environment Variables:**
-   Create a `.env` file in the `app/` directory and populate it with your necessary secrets and configurations. You may also need to configure the initial database records depending on the `models.py` structure (e.g., Bot Token and Twitch credentials).
+2. **Configure Database Settings:**
+   The bot's configuration (such as the Telegram Bot Token, Twitch API credentials, and other settings) is loaded directly from the `config` table in the database, rather than a `.env` file. Before starting the bot, ensure the database is initialized and the `config` table is populated with the required keys (e.g., `bot_token`, `client_id`, `client_secret`). An empty `.env` file in the `app/` directory might still be required by `docker-compose`.
 
 3. **Deploy with Docker Compose:**
    Run the following command to build the image and start the container in the background:
