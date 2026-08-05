@@ -41,4 +41,4 @@ Before you begin, ensure you have the following:
 - Twitch Helix API
 
 ## License
-MIT (or add your preferred license here)
+MIT
